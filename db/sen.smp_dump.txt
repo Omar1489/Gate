@@ -1,0 +1,7 @@
+
+State Machine - |sen|nextstate
+Name nextstate.s4 nextstate.s3 nextstate.s2 nextstate.s1 
+nextstate.s1 0 0 0 0 
+nextstate.s2 0 0 1 1 
+nextstate.s3 0 1 0 1 
+nextstate.s4 1 0 0 1 

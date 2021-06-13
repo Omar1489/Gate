@@ -1,0 +1,45 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "LAMPG",
+					"strict" : false
+				},
+				{
+					"name" : "LAMPR",
+					"strict" : false
+				},
+				{
+					"name" : "BUZZER",
+					"strict" : false
+				},
+				{
+					"name" : "CLK",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "motion_sensor2",
+					"strict" : false
+				},
+				{
+					"name" : "motion_sensor1",
+					"strict" : false
+				},
+				{
+					"name" : "infrared_sensor",
+					"strict" : false
+				},
+				{
+					"name" : "motion_sensor3",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

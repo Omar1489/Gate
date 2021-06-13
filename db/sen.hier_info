@@ -1,0 +1,42 @@
+|sen
+motion_sensor1 => nextstate.DATAA
+motion_sensor1 => LAMPR.OUTPUTSELECT
+motion_sensor1 => LAMPG.OUTPUTSELECT
+motion_sensor1 => BUZZER.OUTPUTSELECT
+motion_sensor1 => nextstate.DATAA
+motion_sensor2 => nextstate.DATAA
+motion_sensor2 => LAMPR.OUTPUTSELECT
+motion_sensor2 => LAMPG.OUTPUTSELECT
+motion_sensor2 => BUZZER.OUTPUTSELECT
+motion_sensor2 => nextstate.DATAA
+motion_sensor3 => LAMPG.OUTPUTSELECT
+motion_sensor3 => LAMPR.OUTPUTSELECT
+motion_sensor3 => BUZZER.OUTPUTSELECT
+infrared_sensor => nextstate.OUTPUTSELECT
+infrared_sensor => nextstate.OUTPUTSELECT
+infrared_sensor => nextstate.OUTPUTSELECT
+infrared_sensor => nextstate.OUTPUTSELECT
+infrared_sensor => nextstate.OUTPUTSELECT
+infrared_sensor => nextstate.OUTPUTSELECT
+infrared_sensor => nextstate.OUTPUTSELECT
+infrared_sensor => nextstate.OUTPUTSELECT
+infrared_sensor => BUZZER.OUTPUTSELECT
+infrared_sensor => LAMPG.OUTPUTSELECT
+infrared_sensor => LAMPR.OUTPUTSELECT
+infrared_sensor => Selector6.IN2
+CLK => BUZZER~reg0.CLK
+CLK => LAMPG~reg0.CLK
+CLK => LAMPR~reg0.CLK
+CLK => nextstate~5.DATAIN
+reset => nextstate.s4.OUTPUTSELECT
+reset => nextstate.s3.OUTPUTSELECT
+reset => nextstate.s2.OUTPUTSELECT
+reset => nextstate.s1.OUTPUTSELECT
+reset => BUZZER~reg0.ACLR
+reset => LAMPG~reg0.ACLR
+reset => LAMPR~reg0.PRESET
+LAMPG <= LAMPG~reg0.DB_MAX_OUTPUT_PORT_TYPE
+LAMPR <= LAMPR~reg0.DB_MAX_OUTPUT_PORT_TYPE
+BUZZER <= BUZZER~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
