@@ -1,0 +1,39 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+
+ENTITY sen IS 
+PORT( motion-sensor1,motion_sensor2,motion_sensor3,infrared_sensor,CLK:IN STD_Logic;
+      LAMPG,LAMPR,BUZZER:OUT STD_LOGIC)
+END sen;
+
+ARCHITECTURE behaviour OF sen IS 
+
+BEGIN 
+
+PROCESS(motion_sensor1,motion_sensor2,motion_sensor3,infrared_sensor,CLK)
+IF(CLK'EVENT AND CLK = '1') 
+THEN
+IF(infrared_sensor=='1') 
+THEN
+BUZZER <= '1';
+LAMPG <= '1';
+
+ELSIF((motion_sensor1 =='1') AND (motion_sensor2 =='0') AND (motion_sensor3 =='0')) 
+	THEN 
+	wait for 1s;
+	IF((motion_sensor1 =='0') AND (motion_sensor2 =='1') AND (motion_sensor3 =='0')) 
+		THEN 
+		wait for 1s;
+		IF((motion_sensor1 =='0') AND (motion_sensor2 =='0') AND (motion_sensor3 =='1')) 
+			THEN LAMPG<= '1';
+		ELSE
+		LAMPR<= '1';
+		END IF;
+	ELSE
+		LAMPR <= '1';
+	END IF;	
+ELSE
+LAMPR<= '1';
+END IF;	
+
+      
